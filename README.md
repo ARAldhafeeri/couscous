@@ -1,8 +1,8 @@
 # couscous
 
-A VS Code extension that uses AI to analyze code quality against best practices and team conventions, providing instant visual feedback with delicious couscous or... less appetitive indicators.
+Couscous is a VS Code extension that uses AI to analyze your code quality against best practices and team conventions. It provides instant visual feedback, rewarding you with the satisfaction of delivering high-standard "code dishes" or... well, letting you know when your code needs a little more seasoning.
 
-I mean what other way to insure your team follow conventions and best practices other than making them feel like a chief in prestigious resturant that deliver high standard couscous dishes or you know... someone with serious bad code diaria needs to be treated.
+Think of it as your personal code chef, ensuring your team follows conventions and best practices. Write clean, elegant code, and you'll feel like a master chef in a prestigious restaurant, serving up delicious couscous. But if your code is messy or inconsistent, you might just get a not-so-appetizing reminder to clean up your act.
 
 ## Features
 

@@ -1,0 +1,11 @@
+# Ignore all files by default
+*
+
+# Allow necessary files
+!dist/**/*
+!package.json
+!README.md
+!LICENSE
+!assets/**/*
+!src/**/*
+!node_modules/vscode/**/*

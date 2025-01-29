@@ -1,10 +1,16 @@
 {
   "name": "couscous",
-  "displayName": "Couscous Code Analyzer",
+  "displayName": "Couscous AI-Driven Code Analyzer",
   "version": "1.0.0",
+  "icon": "assets/logo.png",
+  "publisher": "ms-vscode",
+  "author": {
+    "name": "Ahmed Rakan"
+  },
   "engines": {
     "vscode": "^1.78.0"
   },
+  "pricing": "Free",
   "main": "./dist/src/extension.js",
   "scripts": {
     "compile": "tsc -p ./",
@@ -19,6 +25,10 @@
     "axios": "^1.6.2",
     "glob": "^11.0.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ARAldhafeeri/couscous.git"
+  },
   "devDependencies": {
     "@types/jest": "^29.5.12",
     "@types/mocha": "^10.0.10",
@@ -32,6 +42,12 @@
     "sinon": "^19.0.2",
     "ts-jest": "^29.1.2",
     "typescript": "^5.3.3",
-    "vsce": "^2.15.0"
-  }
+    "vsce": "^2.15.0",
+    "vscode": "^1.1.37"
+  },
+  "activationEvents": [
+    "onCommand:extension.analyzeCode",
+    "onLanguage:javascript",
+    "onLanguage:typescript"
+  ]
 }
