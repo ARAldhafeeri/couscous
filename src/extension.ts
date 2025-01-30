@@ -12,8 +12,9 @@ export async function activate(context: vscode.ExtensionContext) {
 
   // Get API key and conventions via popups
   const apiKey = await vscode.window.showInputBox({
-    prompt: "Enter your Deepseek API key",
+    prompt: "Enter your API key ( deepseek or openai platform )",
     ignoreFocusOut: true,
+    password: true,
   });
 
   if (!apiKey) {
@@ -23,7 +24,8 @@ export async function activate(context: vscode.ExtensionContext) {
   couscous.setApiKey(apiKey);
 
   const conventions = await vscode.window.showInputBox({
-    prompt: "Enter team conventions (comma-separated)",
+    prompt:
+      "Enter team conventions (comma-separated) e.g. follow solid principles, code should be commented",
     ignoreFocusOut: true,
   });
 

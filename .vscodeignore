@@ -1,11 +1,14 @@
-# Ignore all files by default
+# Ignore everything by default
 *
 
 # Allow necessary files
 !dist/**/*
 !package.json
+!package-lock.json
 !README.md
 !LICENSE
-!assets/**/*
-!src/**/*
-!node_modules/vscode/**/*
+
+# Allow node_modules only for production dependencies
+node_modules/**
+!node_modules/vscode
+!node_modules/some-needed-package

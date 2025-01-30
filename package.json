@@ -11,12 +11,13 @@
     "vscode": "^1.78.0"
   },
   "pricing": "Free",
-  "main": "./dist/src/extension.js",
+  "main": "./dist/extension.js",
   "scripts": {
     "compile": "tsc -p ./",
+    "build": "esbuild src/extension.ts --bundle --outfile=dist/extension.js --platform=node --external:vscode",
     "watch": "tsc -watch -p ./",
     "test": "vscode-test",
-    "package": "vsce package"
+    "package": "npm run build && vsce package"
   },
   "dependencies": {
     "@langchain/core": "^0.3.37",
@@ -38,6 +39,7 @@
     "@types/vscode": "^1.78.0",
     "@vscode/test-cli": "^0.0.10",
     "@vscode/test-electron": "^2.4.1",
+    "esbuild": "^0.24.2",
     "jest": "^29.7.0",
     "mocha": "^11.1.0",
     "sinon": "^19.0.2",
