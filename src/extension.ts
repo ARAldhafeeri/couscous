@@ -31,6 +31,34 @@ export async function activate(context: vscode.ExtensionContext) {
     couscous.setConventions(conventions.split(","));
   }
 
+  // Get model type via quick pick
+  const modelType = await vscode.window.showQuickPick(["openai", "deepseek"], {
+    placeHolder: "Select the model provider",
+    ignoreFocusOut: true,
+  });
+
+  if (!modelType) {
+    vscode.window.showErrorMessage(
+      "Couscous requires a model provider to function"
+    );
+    return;
+  }
+  couscous.setType(modelType);
+
+  // Get model slug via input box
+  const modelSlugExample = modelType === "openai" ? "gpt-4" : "deepseek-chat";
+  const modelSlug = await vscode.window.showInputBox({
+    prompt: `Enter the model slug for ${modelType} (e.g., ${modelSlugExample})`,
+    ignoreFocusOut: true,
+  });
+
+  if (!modelSlug) {
+    vscode.window.showErrorMessage(
+      "Couscous requires a model slug to function"
+    );
+    return;
+  }
+  couscous.setModelSlug(modelSlug);
   // Create decorators
   decorationTypeGood = vscode.window.createTextEditorDecorationType({
     gutterIconPath: context.asAbsolutePath("./assets/yummy.png"),

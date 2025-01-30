@@ -19,8 +19,9 @@
     "package": "vsce package"
   },
   "dependencies": {
-    "@langchain/core": "^0.3.36",
+    "@langchain/core": "^0.3.37",
     "@langchain/deepseek": "^0.0.1",
+    "@langchain/openai": "^0.4.2",
     "@types/glob": "^8.1.0",
     "axios": "^1.6.2",
     "glob": "^11.0.1"

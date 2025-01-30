@@ -42,7 +42,11 @@ Add to your `.vscode/settings.json`:
 
 ```json
 {
-  "couscous.apiKey": "your-deepseek-key",
+  "couscous": {
+    "type": "deepseek", // openai or deepseek
+    "model": "r1",
+    "apiKey": "your-deepseek-key"
+  },
   "couscous.conventions": ["jsdoc", "no-var", "error-handling"]
 }
 ```
