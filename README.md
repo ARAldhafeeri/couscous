@@ -6,7 +6,7 @@ Think of it as your personal code chef, ensuring your team follows conventions a
 
 ## Features
 
-- 🧠 AI-powered code analysis using Deepseek
+- 🧠 AI-powered code analysis using Deepseek or OpenAI models ( support for local is coming )
 - 🥣 Couscous icon for compliant files (score > 70%)
 - 💩 Poop icon for files needing improvement
 - 🔍 Inline violation highlighting
