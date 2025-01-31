@@ -3,7 +3,7 @@
   "displayName": "Couscous AI-Driven Code Analyzer",
   "version": "1.0.0",
   "icon": "assets/logo.png",
-  "publisher": "ms-vscode",
+  "publisher": "AhmedRakan",
   "author": {
     "name": "Ahmed Rakan"
   },
@@ -25,7 +25,8 @@
     "@langchain/openai": "^0.4.2",
     "@types/glob": "^8.1.0",
     "axios": "^1.6.2",
-    "glob": "^11.0.1"
+    "glob": "^11.0.1",
+    "zod": "^3.24.1"
   },
   "repository": {
     "type": "git",
@@ -49,8 +50,39 @@
     "vscode": "^1.1.37"
   },
   "activationEvents": [
-    "onCommand:extension.analyzeCode",
-    "onLanguage:javascript",
-    "onLanguage:typescript"
-  ]
+    "onCommand:extension.analyze"
+  ],
+  "contributes": {
+    "configuration": {
+      "title": "Couscous",
+      "properties": {
+        "couscous.conventions": {
+          "type": "array",
+          "default": [],
+          "description": "Team conventions (e.g., ['follow SOLID principles', 'comment code'])"
+        },
+        "couscous.modelType": {
+          "type": "string",
+          "enum": ["openai", "deepseek"],
+          "default": "openai",
+          "description": "AI model provider"
+        },
+        "couscous.modelSlug": {
+          "type": "string",
+          "default": "gpt-4",
+          "description": "Model identifier (e.g., 'gpt-4' or 'deepseek-chat')"
+        }
+      }
+    },
+    "commands": [{
+      "command": "couscous.analyze",
+      "title": "Analyze Code"
+    }],
+    "keybindings": [{
+      "command": "couscous.analyze",
+      "key": "ctrl+1",
+      "mac": "cmd+1",
+      "when": "editorTextFocus"
+    }]
+  }
 }

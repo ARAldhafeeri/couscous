@@ -24,17 +24,10 @@ Think of it as your personal code chef, ensuring your team follows conventions a
 
 ## Usage
 
-1. Set API key:
-   ```bash
-   Cmd/Ctrl+Shift+P > "Set Deepseek API Key"
-   ```
-2. Configure conventions:
-   ```bash
-   Cmd/Ctrl+Shift+P > "Set Team Conventions"
-   ```
-3. Save any file to trigger analysis
-4. Hover over icons for details
-5. Use Quick Fix (Cmd/Ctrl+.) to apply suggestions
+run the code anlaysis on a file of " any programming langauge " :
+
+- ctrl + 1 keys on windows
+- ctrl + 1 keys on mac
 
 ## Configuration
 
@@ -44,12 +37,23 @@ Add to your `.vscode/settings.json`:
 {
   "couscous": {
     "type": "deepseek", // openai or deepseek
-    "model": "r1",
-    "apiKey": "your-deepseek-key"
+    "model": "model-slug"
   },
-  "couscous.conventions": ["jsdoc", "no-var", "error-handling"]
+  "couscous.conventions": [
+    "Use descriptive naming conventions",
+    "Adhere to DRY (Don’t Repeat Yourself)",
+    "Handle errors gracefully",
+    "Write small, single-responsibility functions",
+    "Avoid magic numbers/strings",
+    "Use version control effectively (e.g., meaningful commits)",
+    "Conduct code reviews",
+    "Avoid global mutable state",
+    "Write unit tests"
+  ]
 }
 ```
+
+or configure globally from settings.json
 
 ## Development
 
@@ -86,16 +90,6 @@ MIT © [Ahmed Rakan]
 
 **Acknowledgments**
 
-- Deepseek for the AI magic
+- Deepseek, OpenAI for the AI magic
 - LangChain for LLM orchestration
 - VS Code team for extension APIs
-
-```
-
-Let me know if you'd like me to add any specific:
-- Badges (version, build status, etc.)
-- Detailed troubleshooting
-- Code examples
-- Contribution guidelines
-- Security considerations
-```
