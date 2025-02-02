@@ -24,7 +24,7 @@ Think of it as your personal code chef, ensuring your team follows conventions a
 
 ## Usage
 
-run the code anlaysis on a file of " any programming langauge " :
+run the code anlaysis on a file of " any programming language " :
 
 - ctrl + 1 keys on windows
 - ctrl + 1 keys on mac
